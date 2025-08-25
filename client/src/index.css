@@ -1,0 +1,188 @@
+/* src/index.css */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --border-color: #444;
+  --card-bg: #1e1e1e;
+  --accent-color: #646cff;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.search-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-form input {
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: #fff;
+  width: 300px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: var(--accent-color);
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.search-form button:hover {
+  border-color: #888eff;
+}
+.search-form button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.repo-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.repo-card:hover {
+  border-color: var(--accent-color);
+}
+
+.repo-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25em;
+}
+
+.repo-card h3 a {
+  color: #888eff;
+  text-decoration: none;
+}
+.repo-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.repo-card p {
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.repo-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.repo-owner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* Message Styles */
+.message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+.message.error {
+  background-color: #4d2020;
+  color: #ffc2c2;
+}
+.message.success {
+  background-color: #1e4d20;
+  color: #c2ffc6;
+}
+
+/* ADD THIS TO THE END OF src/index.css */
+
+/* Pagination Controls Styles */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination-controls button {
+  padding: 8px 16px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: #333;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  font-size: 1em;
+  font-weight: 500;
+}
