@@ -7,7 +7,7 @@ import Dashboard from './components/Dashboard';
 import PaginationControls from './components/PaginationControls';
 
 // Define the backend API URL
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://api-driven-web-app.onrender.com/api';
 
 function App() {
   const [repos, setRepos] = useState([]);
